@@ -2,8 +2,6 @@ package objectAndClass;
 
 public class Main {
 
-
-
     public static void main(String[] args) {
         // Author
         Author JohnTolkien = Author.Author("John Tolkien ");
