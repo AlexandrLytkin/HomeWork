@@ -1,19 +1,15 @@
 package objectAndClass;
 
 public class Author {
-    private String firstName;
-    private String lastName;
+    private String name;
 
-    public Author(String firstNameAuthor, String lastNameAuthor) {
-        this.firstName = firstNameAuthor;
-        this.lastName = lastNameAuthor;
+    public static Author Author(String nameAuthor) {
+        Author author = new Author();
+        author.name = nameAuthor;
+        return author;
     }
 
-    public String getFirstName() {
-        return this.firstName;
-    }
-
-    public String getLastName() {
-        return this.lastName;
+    public String getName() {
+        return this.name;
     }
 }
