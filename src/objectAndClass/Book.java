@@ -1,25 +1,24 @@
 package objectAndClass;
 
+import java.rmi.activation.ActivationGroup_Stub;
+
 public class Book {
     private String bookName;
-    String authorBook;
+    private final Author author;
     private int publishingYear;
 
 
-    public static Book Book(String name, Author author, int publishing) {
-        Book book = new Book();
-        book.bookName = name;
-        book.authorBook = author.getName();
-        book.publishingYear = publishing;
-        return book;
+    public Book(String name, Author author, int publishing) {
+        this.bookName = name;
+        this.author = author;
+        this.publishingYear = publishing;
     }
 
     public String getBookName() {
         return this.bookName;
     }
-
-    public String getAuthorBook() {
-        return this.authorBook;
+    public Author getAuthorBook() {
+        return this.author;
     }
     public int getPublishingYear() {
         return this.publishingYear;
