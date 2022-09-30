@@ -17,7 +17,7 @@ public class Main {
         Hobbits.setPublishingYear(2020);
         System.out.println("Hobbits.getPublishingYear() = " + Hobbits.getPublishingYear());
         System.out.println();
-        Book WarAndPeace =  new Book("WarAndPeace", JohnTolkien.getName() , 2010);
+        Book WarAndPeace =  new Book("WarAndPeace", LevTolstoi.getName(), 2010);
         System.out.println("WarAndPeace.getBookName() = " + WarAndPeace.getBookName());
         System.out.println("WarAndPeace.getAuthorBook() = " + WarAndPeace.getAuthorBook());
         System.out.println("WarAndPeace.getPublishingYear() = " + WarAndPeace.getPublishingYear());
