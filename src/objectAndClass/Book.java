@@ -1,26 +1,31 @@
 package objectAndClass;
 
 public class Book {
-    private String bookName;
+    private final String bookName;
     private final Author author;
     private int publishingYear;
 
-    public Book(String name, Author author, int publishing) {
-        this.bookName = name;
-        this.author = author ;
-        this.publishingYear = publishing;
+    public Book(String bookName, Author author, int publishingYear) {
+        this.bookName = bookName;
+        this.author = author;
+        this.publishingYear = publishingYear;
     }
 
     public String getBookName() {
-        return this.bookName;
+        return bookName;
     }
-    public Author getAuthorBook() {
-        return this.author;
+
+    public Author getAuthor() {
+        return author;
     }
+
     public int getPublishingYear() {
-        return this.publishingYear;
+        return publishingYear;
     }
+
     public void setPublishingYear(int publishingYear) {
         this.publishingYear = publishingYear;
     }
 }
+
+
