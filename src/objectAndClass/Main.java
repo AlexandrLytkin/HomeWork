@@ -15,14 +15,18 @@ public class Main {
         System.out.println("Hobbits.getBookName() = " + Hobbits.getBookName());
         System.out.println("Hobbits.getAuthor().getName() = " + Hobbits.getAuthor().getName() + " " + Hobbits.getAuthor().getLastName());
         System.out.println("Hobbits.getPublishingYear() = " + Hobbits.getPublishingYear());
+        System.out.println();
         System.out.println("WarAndPeace.getBookName() = " + WarAndPeace.getBookName());
         System.out.println("WarAndPeace.getAuthor().getName() = " + WarAndPeace.getAuthor().getName() + " " + WarAndPeace.getAuthor().getLastName());
         System.out.println("WarAndPeace.getPublishingYear() = " + WarAndPeace.getPublishingYear());
         Hobbits.setPublishingYear(2020);
         WarAndPeace.setPublishingYear(2022);
+        System.out.println();
         System.out.println("Hobbits.getPublishingYear() = " + Hobbits.getPublishingYear());
         System.out.println("WarAndPeace.getPublishingYear() = " + WarAndPeace.getPublishingYear());
-
+        System.out.println();
+        System.out.println(JohnTolkien);
+        System.out.println(WarAndPeace);
     }
 }
 
