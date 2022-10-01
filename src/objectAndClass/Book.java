@@ -1,31 +1,31 @@
 package objectAndClass;
 
 public class Book {
-    private String bookName;
-    String authorBook;
+    private final String bookName;
+    private final Author author;
     private int publishingYear;
 
-
-    public static Book Book(String name, Author author, int publishing) {
-        Book book = new Book();
-        book.bookName = name;
-        book.authorBook = author.getName();
-        book.publishingYear = publishing;
-        return book;
+    public Book(String bookName, Author author, int publishingYear) {
+        this.bookName = bookName;
+        this.author = author;
+        this.publishingYear = publishingYear;
     }
 
     public String getBookName() {
-        return this.bookName;
+        return bookName;
     }
 
-    public String getAuthorBook() {
-        return this.authorBook;
+    public Author getAuthor() {
+        return author;
     }
+
     public int getPublishingYear() {
-        return this.publishingYear;
+        return publishingYear;
     }
 
     public void setPublishingYear(int publishingYear) {
         this.publishingYear = publishingYear;
     }
 }
+
+

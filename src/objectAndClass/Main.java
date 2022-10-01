@@ -1,28 +1,28 @@
 package objectAndClass;
 
+import javax.sound.midi.Soundbank;
+
 public class Main {
 
     public static void main(String[] args) {
         // Author
-        Author JohnTolkien = Author.Author("John Tolkien ");
-        System.out.println("JohnTolkien.name = " + JohnTolkien.getName());
-        Author LevTolstoi = Author.Author("Lev Tolstoi");
-        System.out.println("JohnTolkien.getName() = " + JohnTolkien.getName());
-        System.out.println();
-
+        Author JohnTolkien = new Author("John", "Tolkien");
+        Author LevTolstoi = new Author("Lev", "Tolstoi");
         // Book
-        Book Hobbits = Book.Book("Hobbits", Author.Author(JohnTolkien.getName()), 2005);
-        System.out.println("Hobbits.bookName = " + Hobbits.getBookName());
-        System.out.println("Hobbits.authorBook = " + Hobbits.authorBook);
-        System.out.println("PublishingYear.publishingYear = " + Hobbits.getPublishingYear());
-        Hobbits.setPublishingYear(2020);
+        Book Hobbits = new Book("Hobbits",JohnTolkien, 2005);
+        Book WarAndPeace =  new Book("WarAndPeace", LevTolstoi, 2010);
+
+        System.out.println("Hobbits.getBookName() = " + Hobbits.getBookName());
+        System.out.println("Hobbits.getAuthor().getName() = " + Hobbits.getAuthor().getName() + " " + Hobbits.getAuthor().getLastName());
         System.out.println("Hobbits.getPublishingYear() = " + Hobbits.getPublishingYear());
-        Book WarAndPeace = Book.Book("WarAndPeace", Author.Author(LevTolstoi.getName()), 2010);
         System.out.println("WarAndPeace.getBookName() = " + WarAndPeace.getBookName());
-        System.out.println("WarAndPeace.getAuthorBook() = " + WarAndPeace.getAuthorBook());
+        System.out.println("WarAndPeace.getAuthor().getName() = " + WarAndPeace.getAuthor().getName() + " " + WarAndPeace.getAuthor().getLastName());
         System.out.println("WarAndPeace.getPublishingYear() = " + WarAndPeace.getPublishingYear());
+        Hobbits.setPublishingYear(2020);
         WarAndPeace.setPublishingYear(2022);
+        System.out.println("Hobbits.getPublishingYear() = " + Hobbits.getPublishingYear());
         System.out.println("WarAndPeace.getPublishingYear() = " + WarAndPeace.getPublishingYear());
+
     }
 }
 
